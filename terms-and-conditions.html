@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Terms and Conditions - Sky Pulse</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
         tailwind.config = {
@@ -18,45 +18,95 @@
                         "button-dark": "#21262D",
                         "button-hover-dark": "#30363D"
                     },
-                    fontFamily: { "display": ["Space Grotesk", "sans-serif"] }
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    }
                 }
             }
         }
     </script>
+    <style>
+        body { min-height: 100dvh; }
+        .highlight {
+            background-color: rgba(250, 204, 21, 0.15);
+            color: #FACC15;
+            padding: 0.1em 0.3em;
+            border-radius: 0.25rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="bg-background-dark font-display text-text-light">
     <div class="relative flex h-auto min-h-screen w-full flex-col p-6 max-w-4xl mx-auto">
         <div class="flex flex-col gap-8">
             <h1 class="text-4xl font-bold text-primary">Terms and Conditions</h1>
             <p class="text-gray-400">Last updated: February 2026</p>
+            
+            <div class="flex flex-col gap-8 text-base leading-relaxed text-gray-300">
+                <p>By downloading or using <span class="text-primary font-bold">Sky Pulse</span>, you agree to the following terms. Please read them carefully.</p>
 
-            <div class="flex flex-col gap-6 text-gray-300">
-                <p>By downloading or using <span class="text-primary font-bold">Sky Pulse</span>, you agree to these terms.</p>
-
-                <div class="flex flex-col gap-2">
-                    <h2 class="text-xl font-bold text-primary">1. User Conduct</h2>
-                    <p>You agree to play fairly, not use cheats or hacks, and not attempt to reverse-engineer the game.</p>
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">1. License</h2>
+                    <p>Sky Pulse grants you a limited, non-exclusive, non-transferable, and revocable license to use the game for personal, non-commercial entertainment purposes.</p>
                 </div>
 
-                <div class="flex flex-col gap-2">
-                    <h2 class="text-xl font-bold text-primary">2. Intellectual Property</h2>
-                    <p>The game's code, design, and graphics are the property of <span class="text-primary font-bold">NNNH Studios</span>. Unauthorized redistribution is prohibited.</p>
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">2. User Conduct</h2>
+                    <p>By playing Sky Pulse, you agree to:</p>
+                    <ul class="list-disc list-inside flex flex-col gap-2 pl-2">
+                        <li>Play fairly and respect other players.</li>
+                        <li>Not use <span class="highlight">cheats, hacks, mods, or exploits</span>.</li>
+                        <li>Not attempt to modify, decompile, or reverse-engineer the game code.</li>
+                        <li>Not use the game for any illegal activities.</li>
+                    </ul>
                 </div>
 
-                <div class="flex flex-col gap-2">
-                    <h2 class="text-xl font-bold text-primary">3. Advertisements</h2>
-                    <p>Third-party ads help support this game. We are not responsible for the content of external ad links.</p>
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">3. Advertisements</h2>
+                    <p>Sky Pulse is supported by advertisements provided by third-party networks (Google AdMob, Unity Ads, IronSource). These ads help support the ongoing development of the game.</p>
                 </div>
 
-                <div class="flex flex-col gap-2 border-t border-gray-800 pt-6 mt-4">
-                    <p>For support: <span class="text-primary font-bold">nnnhstudios@gmail.com</span></p>
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">4. Data Usage</h2>
+                    <p>Authentication, leaderboards, and cloud saves are handled through <span class="highlight">Google Play Games Services</span>. Advertising data is handled by third-party ad providers as described in our Privacy Policy.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">5. Intellectual Property</h2>
+                    <p>All game content, including but not limited to <span class="highlight">graphics, code, characters, and design</span>, is the property of <span class="text-primary font-bold">NNNH Studios</span> and may not be reused or redistributed without permission.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">6. Disclaimer</h2>
+                    <p>The game is provided <span class="highlight">"as is"</span>, without warranties of any kind. We do not guarantee that the game will be error-free or available at all times.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">7. Limitation of Liability</h2>
+                    <p>NNNH Studios shall not be liable for any indirect, incidental, or consequential damages arising from gameplay, data loss, or advertisements.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">8. Changes to Terms</h2>
+                    <p>We reserve the right to update these Terms and Conditions at any time. Continued use of the game indicates your acceptance of the new terms.</p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h2 class="text-2xl font-bold text-primary">9. Contact</h2>
+                    <p>For questions or support, contact us at: 
+                        <a href="mailto:nnnhstudios@gmail.com" class="text-primary underline font-bold">nnnhstudios@gmail.com</a>
+                    </p>
                 </div>
             </div>
 
-            <div class="flex justify-center gap-4 mt-6">
-                <a class="bg-button-dark px-6 py-3 rounded-lg font-bold hover:bg-button-hover-dark" href="https://nnnhstudios.github.io">Home</a>
-                <a class="bg-button-dark px-6 py-3 rounded-lg font-bold hover:bg-button-hover-dark" href="https://nnnhstudios.github.io/privacy-policy.html">Privacy Policy</a>
+            <div class="flex flex-1 gap-3 flex-wrap py-6 justify-center border-t border-gray-800 mt-6">
+                <a class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-button-dark text-text-light font-bold hover:bg-button-hover-dark transition" href="https://nnnhstudios.github.io">Home</a>
+                <a class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-button-dark text-text-light font-bold hover:bg-button-hover-dark transition" href="https://nnnhstudios.github.io/privacy-policy.html">Privacy Policy</a>
             </div>
+
+            <footer class="text-center text-gray-500 text-sm pb-10">
+                © 2026 NNNH Studios. All rights reserved.
+            </footer>
         </div>
     </div>
 </body>
